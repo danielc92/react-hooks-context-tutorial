@@ -4,7 +4,7 @@ import React, { createContext } from 'react';
 export const ThemeContext = createContext();
 
 
-class ThemeContextProvider extends Component{
+class ThemeContextProvider extends React.Component{
     
     state = {
         isLightTheme: true,
