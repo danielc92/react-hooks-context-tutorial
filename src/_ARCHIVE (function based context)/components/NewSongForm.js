@@ -6,7 +6,6 @@ export default function NewSongForm({ addSong }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addSong(title);
         setTitle('');
     }
 

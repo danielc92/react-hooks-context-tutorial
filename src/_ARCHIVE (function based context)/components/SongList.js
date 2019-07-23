@@ -1,30 +1,17 @@
-import React, { useState , useEffect, useContext} from 'react';
+import React, { useContext} from 'react';
 import NewSongForm from './NewSongForm';
-import uuidv4 from 'uuidv4';
 import { ThemeContext } from '../contexts/ThemeContext';
+import { SongContext } from '../contexts/SongContext';
 
 export default function SongList() {
-    
+
+    const { songs } = useContext(SongContext);
     const { isLightTheme, light, dark } = useContext(ThemeContext);
-
-    const [songs, setSongs] = useState([
-        {title: 'almost home', id: 1},
-        {title: 'memory gospel', id: 2},
-        {title:'this wild darkness', id: 3}
-    ])
-
-    const addSong = (title) => {
-        let newSong = { title, id: uuidv4() }
-        setSongs([...songs, newSong])
-    }
-
-    useEffect(()=>{
-        console.log('use effect')
-    })
+    console.log(light, dark)
+    
 
     return (
         <React.Fragment>
-
             <div className="card">
                 <div className="card-content">
                 <h5>{ isLightTheme ? 'Light theme': 'Dark theme'}</h5>
@@ -36,8 +23,7 @@ export default function SongList() {
                 </ul>
                 </div>
             </div>
-            <NewSongForm addSong={addSong}/>
-
+            <NewSongForm/>
         </React.Fragment>
     )
 }
