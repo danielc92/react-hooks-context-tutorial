@@ -24,18 +24,22 @@ const BookForm = () => {
                 <h5>Add a book here</h5>
                 <form onSubmit={handleSubmit}>
                     <div className="input-field">
+                    <i class="material-icons prefix">short_text</i>
                         <label >Title</label>
                         <input value={title} onChange={(e)=> setTitle(e.target.value)} type="text"/>
                     </div>
+                    
                     <div className="input-field">
-                        <label >Author</label>
-                        <input value={author} onChange={(e)=> setAuthor(e.target.value)} type="text"/>
-                    </div>
-                    <div className="input-field">
+                    <i class="material-icons prefix">subject</i>
                         <label >About</label>
                         <input value={about} onChange={(e)=> setAbout(e.target.value)} type="text"/>
                     </div>
-                    <button className="btn-small orange" type="submit">Add this book</button>
+                    <div className="input-field">
+                    <i class="material-icons prefix">account_circle</i>
+                        <label >Author</label>
+                        <input value={author} onChange={(e)=> setAuthor(e.target.value)} type="text"/>
+                    </div>
+                    <button className="btn orange" type="submit"><i class="material-icons left">library_add</i>Add</button>
                 </form>
             </div>
         </div>

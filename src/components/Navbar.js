@@ -8,7 +8,7 @@ const Navbar = () => {
     return (
         <div className="card">
             <div className="card-content">
-                <h5>Daniels reading list</h5>
+                <h5>Daniels Reading React App</h5>
                 <p>You have <span className="chip">{ books.length } books</span> to read...</p>
             </div>
         </div>
