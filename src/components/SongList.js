@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import NewSongForm from './NewSongForm';
 import uuidv4 from 'uuidv4';
 
@@ -16,15 +16,25 @@ export default function SongList() {
         setSongs([...songs, newSong])
     }
 
+    useEffect(()=>{
+        console.log('use effect')
+    })
+
     return (
-        <div className="SongList">
-            <ul className="collection">
-                {
-                    songs.map(song => 
-                    <li className="collection-item" key={song.id}>{ song.title }</li>)
-                }
-            </ul>
+        <React.Fragment>
+            
+            <div className="card">
+                <div className="card-content">
+                <ul className="collection">
+                    {
+                        songs.map(song => 
+                        <li className="collection-item" key={song.id}>{ song.title }</li>)
+                    }
+                </ul>
+                </div>
+            </div>
             <NewSongForm addSong={addSong}/>
-        </div>
+
+        </React.Fragment>
     )
 }
