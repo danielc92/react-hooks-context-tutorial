@@ -39,7 +39,7 @@ const BookForm = () => {
                         <label >Author</label>
                         <input value={author} onChange={(e)=> setAuthor(e.target.value)} type="text"/>
                     </div>
-                    <button className="btn orange" type="submit"><i class="material-icons left">library_add</i>Add</button>
+                    <button className="btn orange waves-effect waves-light" type="submit"><i class="material-icons left">library_add</i>Add</button>
                 </form>
             </div>
         </div>
