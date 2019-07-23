@@ -8,19 +8,20 @@ const BookForm = () => {
     
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState('');
-    const [country, setCountry] = useState('');
+    const [about, setAbout] = useState('');
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(title, author,country)
-        if (title.length > 0 && author.length > 0 && country.length > 0) {
-            addBook(title, author, country)
+    
+        if (title.length > 0 && author.length > 0 && about.length > 0) {
+            addBook(title, author, about)
         }
     }
     
     return (
         <div className="card">
             <div className="card-content">
+                <h5>Add a book here</h5>
                 <form onSubmit={handleSubmit}>
                     <div className="input-field">
                         <label >Title</label>
@@ -31,10 +32,10 @@ const BookForm = () => {
                         <input value={author} onChange={(e)=> setAuthor(e.target.value)} type="text"/>
                     </div>
                     <div className="input-field">
-                        <label >Country</label>
-                        <input value={country} onChange={(e)=> setCountry(e.target.value)} type="text"/>
+                        <label >About</label>
+                        <input value={about} onChange={(e)=> setAbout(e.target.value)} type="text"/>
                     </div>
-                    <button className="btn" type="submit">Add this book</button>
+                    <button className="btn-small orange" type="submit">Add this book</button>
                 </form>
             </div>
         </div>
