@@ -1,9 +1,11 @@
-import React, { useState , useEffect} from 'react';
+import React, { useState , useEffect, useContext} from 'react';
 import NewSongForm from './NewSongForm';
 import uuidv4 from 'uuidv4';
-
+import { ThemeContext } from '../contexts/ThemeContext';
 
 export default function SongList() {
+    
+    const { isLightTheme, light, dark } = useContext(ThemeContext);
 
     const [songs, setSongs] = useState([
         {title: 'almost home', id: 1},
@@ -22,13 +24,14 @@ export default function SongList() {
 
     return (
         <React.Fragment>
-            
+
             <div className="card">
                 <div className="card-content">
+                <h5>{ isLightTheme ? 'Light theme': 'Dark theme'}</h5>
                 <ul className="collection">
                     {
                         songs.map(song => 
-                        <li className="collection-item" key={song.id}>{ song.title }</li>)
+                        <li className="collection-item indigo-text" key={song.id}>{ song.title }</li>)
                     }
                 </ul>
                 </div>
