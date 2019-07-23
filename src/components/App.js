@@ -3,7 +3,7 @@ import SongList from './SongList';
 
 export default function App() {
     return (
-        <div>
+        <div className="container">
             <SongList/>
         </div>
     )

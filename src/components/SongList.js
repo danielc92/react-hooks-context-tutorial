@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import NewSongForm from './NewSongForm';
 import uuidv4 from 'uuidv4';
+
 
 export default function SongList() {
 
@@ -9,8 +11,8 @@ export default function SongList() {
         {title:'this wild darkness', id: 3}
     ])
 
-    const addSong = () => {
-        let newSong = { title: 'new song', id: uuidv4() }
+    const addSong = (title) => {
+        let newSong = { title, id: uuidv4() }
         setSongs([...songs, newSong])
     }
 
@@ -22,7 +24,7 @@ export default function SongList() {
                     <li className="collection-item" key={song.id}>{ song.title }</li>)
                 }
             </ul>
-            <button className="btn" onClick={addSong}>Add a new song</button>
+            <NewSongForm addSong={addSong}/>
         </div>
     )
 }
