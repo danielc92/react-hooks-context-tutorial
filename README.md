@@ -23,6 +23,11 @@ Status can be toggled from read to unread and from unread to read. Books can als
 
 ![Toggling book status image](https://github.com/danielc92/react-hooks-context-tutorial/blob/master/screenshots/Screen%20Shot%202019-07-24%20at%209.59.46%20am.jpg)
 
+**Adding multiple books**
+Multiple books can be added
+
+![Multiple books image](https://github.com/danielc92/react-hooks-context-tutorial/blob/master/screenshots/Screen%20Shot%202019-07-24%20at%2010.08.52%20am.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:
