@@ -6,6 +6,23 @@ Tutorials come from net ninja.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshots
+
+**Home page**
+Home page contains how many books are currently in the clients list. As well as a form to add a book of their choice. Once books are added the option to modify their state will be provided via buttons.
+
+![Home page image](https://github.com/danielc92/react-hooks-context-tutorial/blob/master/screenshots/Screen%20Shot%202019-07-24%20at%209.58.50%20am.jpg)
+
+**Adding a book**
+Book gets saved in global state, as well as local storage. Such that, if a user refreshes the page the book will still be in the list.
+
+![Adding a book image](https://github.com/danielc92/react-hooks-context-tutorial/blob/master/screenshots/Screen%20Shot%202019-07-24%20at%209.59.38%20am.jpg)
+
+**Toggling book status**
+Status can be toggled from read to unread and from unread to read. Books can also be deleted using the button provided.
+
+![Toggling book status image](https://github.com/danielc92/react-hooks-context-tutorial/blob/master/screenshots/Screen%20Shot%202019-07-24%20at%209.59.46%20am.jpg)
+
 ## Available Scripts
 
 In the project directory, you can run:
